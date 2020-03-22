@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg align-items-start">
+    <a class="navbar-brand py-0" href="/">
+        <img class="img-fluid" src="{{ 'assets/images/logo.png'|theme }}" alt="Līveklanu logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars hamburger-icon"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link p-0" href="#">Sākums</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-0" href="#">Galerija</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-0" href="#">Cenas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-0" href="#">Kontakti</a>
+            </li>
+        </ul>
+        <div class="menu-controls-sm">
+            <div class="d-flex justify-content-center sm-language-select">
+                <a class="language active" href="#">LV</a>
+                <a class="language" href="#">EN</a>
+                <a class="language" href="#">RU</a>
+            </div>
+            <div class="d-flex justify-content-center reservation">
+                <a href="#" class="text-center main-button">Rezervēt</a>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex align-items-center menu-controls">
+        <div class="dropdown d-flex align-items-center">
+            <span id="lang-select" class="d-flex" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <p class="mb-0">LV</p>
+                <img src="{{ 'assets/images/arrow-down.svg'|theme }}" />
+            </span>
+            <div class="dropdown-menu" aria-labelledby="lang-select">
+                <a class="dropdown-item active" href="#">LV</a>
+                <a class="dropdown-item" href="#">EN</a>
+                <a class="dropdown-item" href="#">RU</a>
+            </div>
+        </div>
+        <a href="#" class="main-button">Rezervēt</a>
+    </div>
+</nav>

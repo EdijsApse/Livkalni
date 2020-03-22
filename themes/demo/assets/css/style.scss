@@ -1,0 +1,347 @@
+@font-face {
+    font-family: Axiforma;
+    src: url('../fonts/Axiforma Regular.otf');
+}
+
+$primaryColor: #7D665E;
+$primaryDarkColor: #63514b;
+$primaryFont: Axiforma;
+
+%primary-text-style {
+    font-family: $primaryFont;
+    color: $primaryColor;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 22px;
+}
+
+%primary-link-style {
+    @extend %primary-text-style;
+    transition: all 0.3s;
+    &:hover {
+        color: $primaryDarkColor;
+        &:after {
+            transition: all 0.3s;
+            width: 20px;        
+        }
+    }
+    &:after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 0px;
+        margin: 0px auto;
+        margin-top: 15px;
+        transform: rotate(-5deg);
+        background-color: $primaryDarkColor;
+        transition: all 0.3s
+    }
+}
+
+@mixin background-image($url, $position) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: $position;
+}
+
+h1 {
+    @extend %primary-text-style;
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 63px;
+    letter-spacing: 4px;
+    margin-bottom: 0px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+}
+
+h3 {
+    @extend %primary-text-style;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+}
+
+h2 {
+    @extend %primary-text-style;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 49px;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 0px;
+}
+
+h4 {
+    @extend %primary-text-style;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 1.5px;
+    text-transform: none;
+}
+
+h5 {
+    @extend %primary-text-style;
+    line-height: 29px;
+    letter-spacing: 0.5px;
+}
+
+.mt-73 {
+    margin-top: 73px;
+}
+
+.mb-43 {
+    margin-bottom: 43px;
+}
+
+.mb4 {
+    margin-bottom: 4px;
+}
+
+.mb-24 {
+    margin-bottom: 24px;
+}
+
+.mt-24 {
+    margin-top: 24px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-19 {
+    margin-bottom: 19px;
+}
+
+.shadow-none {
+    text-shadow: none;
+}
+
+.main-container {
+    display: block;
+    max-width: 1440px;
+    margin: 0px auto;
+    .section {
+        padding: 0px 135px;
+        .light-logo {
+            margin-bottom: 36px;
+            width: 80px;
+            height: 90px;
+        }
+    }
+    .navbar {
+        padding: 20px 0px 1.45px 0px;
+        .navbar-brand {
+            width: 69.77px;
+            height: 78.55px;
+            margin-right: 50.23px;
+        }
+        .menu-controls-sm {
+            display: none;
+            .language {
+                @extend %primary-text-style;
+                margin-right: 10px;
+                margin-bottom: 35px;
+                padding: 10px;
+                text-decoration: none;
+                &.active {
+                    background-color: $primaryColor;
+                    color: #FFF;
+                }
+                &:last-of-type {
+                    margin-right: 0px;
+                }
+            }
+        }
+        .nav-link {
+            @extend %primary-link-style;
+            margin-right: 48px;
+        }
+        .navbar-collapse {
+            margin-top: 30px;
+        }
+    }
+    .intro {
+        margin-top: 20px;
+        margin-bottom: 60px;
+        height: 648px;
+        @include background-image('../images/mazais-livkalns.png', center);
+        background-size: cover;
+        .intro-logo {
+            width: 294.43px;
+            height: 331.6px;
+        }
+    }
+    .main-button {
+        @extend %primary-text-style;
+        background-color: $primaryColor;
+        color: #FFF;
+        line-height: 20px;
+        border-radius: 0px;
+        padding: 21px 38px 19px 38px;
+        margin-top: 8px;
+        text-decoration: none;
+        transition: all 0.3s;
+        &:hover {
+            background-color: $primaryDarkColor;
+            transition: all 0.3s;
+        }
+    }
+    #lang-select {
+        margin-right: 30px;
+        cursor: pointer;
+        margin-top: 8px;
+        p {
+            @extend %primary-text-style;
+        }
+        img {
+            margin-left: 9px;
+        }
+    }
+
+    .dropdown-menu {
+        min-width: auto !important;
+        padding: 0px;
+        left: -25%;
+        .dropdown-item {
+            &:focus {
+                background-color: $primaryColor;
+                color: #FFF;
+            }
+        }
+        .active {
+            background-color: $primaryColor;
+            color: #FFF;
+        }
+    }
+
+    .content-section {
+        padding-left: 135px;
+        padding-right: 73.12px;
+        margin-top: 65px;
+        .bg-line {
+            @include background-image('../images/line-background.png', right);
+            min-height: 619px;
+        }
+        .content-image {
+            width: 570px;
+            height: 380.19px;
+            margin-bottom: 60.81px;
+        }
+        h4 {
+            margin-bottom: 32px;
+        }
+        .main-content {
+            margin-right: 30px;
+            padding-right: 30px;
+            p {
+                @extend %primary-text-style;
+                text-transform: none;
+                line-height: 27px;
+                letter-spacing: 0.5px;
+                margin-bottom: 30px;
+                &:last-of-type {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        &:nth-of-type(odd) {
+            padding-right: 135px;
+            padding-left: 73.12px;
+            margin-top: 0px;
+            .row {
+                flex-direction: row-reverse;        
+            }
+            .bg-line {
+                @include background-image('../images/lines-revert.png', left);
+            }
+            .main-content {
+                margin-left: 30px;
+                padding-left: 30px;
+                padding-right: 0px;
+                margin-right: 0px;
+            }
+        }
+    }
+
+    .heading-lines {
+        position: absolute;
+        width: 150px;
+        height: 91px;
+        right: 308px;
+        top: 60px;
+    }
+    
+    .footer {
+        margin-top: 115px;
+        padding-top: 31px;
+        padding-bottom: 30px;
+        @include background-image('../images/top-line.png', top);
+        .bg-line-right {
+            @include background-image('../images/line-right.png', right);
+        }
+        .bg-line-bottom {
+            margin-top: 25px;
+            @include background-image('../images/top-line.png', bottom);
+            padding-bottom: 39px;
+            margin-bottom: 32.22px;
+        }
+
+        
+        .footer-section {
+            margin-left: 52.44px;
+            margin-right: 51px;
+        }
+
+        .contacts {
+            margin-left: 43.44px;
+            margin-top: 25px;
+        }
+
+        .footer-logo {
+            width: 71px;
+            height: 79.66px;
+            margin-right: 39px;
+        }
+        .footer-nav {
+            .footer-link {
+                @extend %primary-link-style;
+                text-decoration: none;
+                margin-top: 15px;
+                &:first-of-type {
+                    margin-top: 30px;
+                }
+            }
+        }
+        .phone-link {
+            @extend %primary-text-style;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 33px;
+            letter-spacing: 3px;
+            text-decoration: none;
+        }
+
+        p {
+            @extend %primary-text-style;
+            line-height: 29px;
+            letter-spacing: 0.5px;
+            &:first-of-type {
+                margin-top: 44px;
+            }
+            &:last-of-type {
+                margin-bottom: 21px;
+            }
+        }
+    }
+}
+
+.car-image {
+    width: 170px;
+    height: 69px;
+    margin-top: 31px;
+}
